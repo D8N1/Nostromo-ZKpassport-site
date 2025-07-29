@@ -32,7 +32,7 @@
 
 /* Base Styles */
 body {
-    font-family: 'Nostromo', 'Courier New', monospace;
+    font-family: 'Nostromo-z869a', 'Courier New', monospace;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
