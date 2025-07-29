@@ -3,7 +3,7 @@
 /* Font Import - Replace with your GitHub hosted font URL */
 @font-face {
     font-family: 'Nostromo';
-    src: url('https://D8N1.github.com/D8N1/Nostromo-ZKpassport-site/blob/main/font/Nostromo-z869a.ttf') format('ttf')
+    src: url('https://D8N1.github.com/D8N1/Nostromo-ZKpassport-site/blob/main/font/Nostromo-z869a.ttf') format('truetype')
     font-weight: normal;
     font-style: normal;
     font-display: swap;
