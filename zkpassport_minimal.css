@@ -1,0 +1,263 @@
+/* ZKPassport - Minimal Dark Theme (Skeleton-inspired) */
+
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* CSS Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables (Inverted Zorp + Nostromo hints) */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-muted: #666666;
+    --accent: #00ff41;
+    --accent-dim: #00cc33;
+    --border: #333333;
+    --hover: #222222;
+}
+
+/* Typography */
+html {
+    font-size: 62.5%; /* 10px base for easy rem calculations */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-weight: 400;
+}
+
+/* Container (Skeleton-inspired) */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography Scale */
+h1 {
+    font-size: 4.0rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 8rem 0 6rem 0;
+}
+
+.tagline {
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+/* Main Sections */
+main {
+    margin-bottom: 8rem;
+}
+
+section {
+    margin-bottom: 6rem;
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    margin-bottom: 2rem;
+}
+
+.download-btn:hover {
+    background-color: var(--accent-dim);
+    transform: translateY(-1px);
+}
+
+.version-info {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Features */
+.features {
+    display: grid;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+.feature {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.feature:last-child {
+    border-bottom: none;
+}
+
+.feature h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    margin-bottom: 0;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+ul li::before {
+    content: "→";
+    color: var(--accent);
+    position: absolute;
+    left: -2rem;
+}
+
+ol li {
+    color: var(--text-secondary);
+}
+
+/* Links */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-dim);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0 6rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 8rem;
+}
+
+footer p {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--text-muted);
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* Responsive (Mobile-First) */
+@media (min-width: 400px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 550px) {
+    h1 {
+        font-size: 5.0rem;
+    }
+    
+    .tagline {
+        font-size: 2.0rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem 6rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    header {
+        padding: 12rem 0 8rem 0;
+    }
+    
+    .tagline {
+        font-size: 2.2rem;
+    }
+}
+
+/* Focus states for accessibility */
+.download-btn:focus,
+a:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
